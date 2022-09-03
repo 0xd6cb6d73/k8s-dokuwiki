@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nginx-data-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  mountOptions:
+    - nfsvers=4
+    - nolock
+    - soft
+    - rw
+  nfs:
+    server: docker01.arno-meschin.gmail.com.beta.tailscale.net
+    path: "/app/dokuwiki"
+    readOnly: false

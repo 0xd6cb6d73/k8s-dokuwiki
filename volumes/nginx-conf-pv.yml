@@ -13,6 +13,6 @@ spec:
     - soft
     - rw
   nfs:
-    server: docker01.arno-meschin.gmail.com.beta.tailscale.net
+    server: docker01
     path: "/app/nginx_conf.d"
     readOnly: false
